@@ -1,0 +1,96 @@
+<div class="container">
+  <div class="jumbotron">
+    
+    <div class="row">
+    <div class="col-xs-6" >
+      <%= image_tag('bg2.png', size: "500x500", alt: "Edit Entry") %>
+      </div>
+      <div class="col-xs-6" style="margin-top: -23px; color:#800000;">
+	      <h3>Free Registrations</h3>
+	      <%= form_for(User.new, :url => new_user_registration_path) do |f| %>
+
+	      <div class="form-group">
+		    <%= f.text_field :first_name,  :class=>"form-control", :placeholder => "First Name" %>
+		  </div>
+		   <div class="form-group">
+		    <%= f.text_field :last_name,  :class=>"form-control", :placeholder => "Last Name" %>
+		  </div>
+		   <div class="form-group">
+		    <%= f.text_field :sub_cast,  :class=>"form-control", :placeholder => "Sub Cast" %>
+		  </div>
+
+		   <div class="form-group">
+		    <%= f.text_field :mobile_no,  :class=>"form-control", :placeholder => "Mobile Number" %>
+		  </div>
+		  <div class="form-group">
+		    <%= f.text_field :dob,  :class=>"form-control", :placeholder => "DOB" %>
+		  </div>
+		  <div class="form-group">
+		    <%= f.text_field :marital_status,  :class=>"form-control", :placeholder => "Marital Status" %>
+		  </div>
+
+		  <div class="form-group">
+		    <%#= f.label :email, :class=>"col-lg-4 control-label" %>
+		    <%= f.email_field :email, autofocus: true, :class=>"form-control", :placeholder => "Email" %>
+		  </div>
+
+		  <div class="form-group">
+		    <%#= f.label :password, :class=>"col-lg-4 control-label" %>
+		    <% if @minimum_password_length %>
+		    <em>(<%= @minimum_password_length %> characters minimum)</em>
+		    <% end %>
+		    <%= f.password_field :password, autocomplete: "off", :class=>"form-control", :placeholder => "Password" %>
+		  </div>
+
+		  <div class="form-group">
+		    <%#= f.label :password_confirmation, :class=>"col-lg-4 control-label" %>
+		    <%= f.password_field :password_confirmation, autocomplete: "off", :class=>"form-control", :placeholder => "Confirm Password" %>
+		  </div>
+
+		  <div class="actions">
+		    <%= f.submit "Sign up", :class => "btn btn-primary" %>
+		  </div>
+		<% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4">
+      <h3>Testimonials</h3>
+       <%= image_tag('bg.jpg', size: "300x200", alt: "Edit Entry") %>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Success Stories</h3>
+      <%= image_tag('new.jpg', size: "300x200", alt: "Edit Entry") %>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Recent Added</h3> 
+      <%= image_tag('admin-bg.jpg', size: "300x200", alt: "Edit Entry") %>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    </div>
+  </div>
+</div>
+
+<style type="text/css">
+	.form-control {
+		height: 30px !important;
+	}
+</style>
